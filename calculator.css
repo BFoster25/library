@@ -1,0 +1,126 @@
+html {
+    background-color: lightgreen;
+}
+
+#calculator {
+    border: 3.5px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(20, 193, 216);
+    grid-template-columns: auto auto auto;
+    justify-self: space-between;
+    width: 250px;
+    margin: auto;
+    padding: 1%;
+    margin-top: 4%;
+    border-radius: 20px;
+}
+
+#screen {
+    display: grid;
+    height: 60px;
+    text-align: right;
+    font-size: 50px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: rgb(27, 240, 34);
+    color: black;
+    border-radius: 10px;
+    font-family: 'Quicksand', 'Roboto', sans-serif;
+    margin-bottom: 20px;
+    padding-right: 6px;
+}
+
+.row {
+    display: inline-block;
+    text-align: center;
+    margin: 1px;
+    width: 100%;
+}
+
+
+.button {
+    background-color: blue;
+    border: 0px solid blue;
+    color: white;
+    font-size: 1rem;
+    border-radius: 100px;
+    margin-bottom: 5%;
+    margin-left: 1px;
+    margin-right: 1px;
+    width: 50px;
+    height: 50px;
+    font-family: 'Quicksand', 'Roboto', sans-serif;
+}
+
+.button:hover {
+    background-color: aqua;
+    color: black;
+    cursor: pointer;
+}
+
+#percentButton {
+    background-color: orangered;
+}
+
+#percentButton:hover {
+    background-color: orange;
+}
+
+#divideButton {
+    background-color: orangered;
+}
+
+#divideButton:hover {
+    background-color: orange;
+}
+
+#addButton {
+    background-color: orangered;
+}
+
+#addButton:hover {
+    background-color: orange;
+}
+
+#subtractButton {
+    background-color: orangered;
+}
+
+#subtractButton:hover {
+    background-color: orange;
+}
+
+#multiplyButton {
+    background-color: orangered;
+}
+
+#multiplyButton:hover {
+    background-color: orange;
+}
+
+#equalButton {
+    background-color: orangered;
+}
+
+#equalButton:hover {
+    background-color: orange;
+}
+
+#acButton {
+    background-color: grey;
+}
+
+#acButton:hover {
+    background-color: lightgrey;
+}
+
+#cButton {
+    background-color: grey;
+}
+
+#cButton:hover {
+    background-color: lightgrey;
+}
+
