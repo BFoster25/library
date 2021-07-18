@@ -1,9 +1,11 @@
 let myLibrary = [];
+console.log(myLibrary)
 
 const addNewBookButton = document.querySelector("#addNewBookButton");
 const submitButton = document.querySelector("#submit");
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
+const form = document.querySelector("#libraryForm");
 
 
 addNewBookButton.addEventListener("click", function () {
@@ -54,21 +56,18 @@ function getReadStatusFromForm() {
 
 function addBookToLibrary() {
     let bookName = title;
-    bookName = new Book(title, author, totalPages, read);
+    bookName = new Book(getTitleFromForm(), getAuthorFromForm(), getTotalPagesFromForm(), getReadStatusFromForm());
     myLibrary.push(bookName);
     return myLibrary;
 }
 
-console.log(myLibrary)
-
 
 submitButton.addEventListener("click", function () {
-
     console.log(getTitleFromForm());
     console.log(getAuthorFromForm());
     console.log(getTotalPagesFromForm());
     console.log(getReadStatusFromForm());
-    console.log(addBookToLibrary());
+    addBookToLibrary()
     console.log(myLibrary)
 
 })
