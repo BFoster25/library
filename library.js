@@ -5,7 +5,6 @@ const addNewBookButton = document.querySelector("#addNewBookButton");
 const submitButton = document.querySelector("#submit");
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
-const form = document.querySelector("#libraryForm");
 
 
 addNewBookButton.addEventListener("click", function () {
@@ -62,7 +61,8 @@ function addBookToLibrary() {
 }
 
 
-submitButton.addEventListener("click", function () {
+submitButton.addEventListener("click", function (e) {
+    e.preventDefault();
     console.log(getTitleFromForm());
     console.log(getAuthorFromForm());
     console.log(getTotalPagesFromForm());
