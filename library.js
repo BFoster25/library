@@ -63,6 +63,7 @@ function addBookToLibrary() {
 
 submitButton.addEventListener("click", function (e) {
     e.preventDefault();
+    modal.style.display = "none";
     console.log(getTitleFromForm());
     console.log(getAuthorFromForm());
     console.log(getTotalPagesFromForm());
