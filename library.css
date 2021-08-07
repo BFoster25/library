@@ -35,3 +35,11 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  #spaceForListOfBooks {
+    display: none;
+      height: 100px;
+      width: 100px;
+      border:1px solid #888;
+
+  }
