@@ -1,74 +1,36 @@
-let myLibrary = [];
-console.log(myLibrary)
+<!DOCTYPE html>
+<html lang="en">
 
-const addNewBookButton = document.querySelector("#addNewBookButton");
-const submitButton = document.querySelector("#submit");
-const modal = document.getElementById("myModal");
-const span = document.getElementsByClassName("close")[0];
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="library.css">
+    <title>Document</title>
+</head>
 
+<body>
+    <button id="addNewBookButton">New Book</button>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-addNewBookButton.addEventListener("click", function () {
-    modal.style.display = "block";
-});
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="libraryForm">
+                <input type="text" name="title" placeholder="Title" id="title"><br>
+                <input type="text" name="author" placeholder="Author" id="author"><br>
+                <input type="text" name="totalPages" placeholder="Total Pages" id="totalPages"><br>
+                <input type="text" name="read" placeholder="Read" id="read"><br>
+                <input type="submit" value="Submit" id="submit">
+            </form>
+        </div>
 
-span.onclick = function () {
-    modal.style.display = "none";
-}
+    </div>
+    <div id="spaceForListOfBooks">
 
-window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+    </div>
+    <script src="library.js"></script>
+</body>
 
-function Book(title, author, totalPages, read) {
-    this.title = title;
-    this.author = author;
-    this.totalPages = totalPages;
-    this.read = read;
-    this.info = function () {
-        return (title + "by" + author + "," + totalPages + "," + read);
-    };
-
-}
-
-
-function getTitleFromForm() {
-    let title = document.querySelector("#title").value;
-    return title;
-}
-
-function getAuthorFromForm() {
-    let author = document.querySelector("#author").value;
-    return author;
-}
-
-function getTotalPagesFromForm() {
-    let totalPages = document.querySelector("#totalPages").value;
-    return totalPages;
-}
-
-function getReadStatusFromForm() {
-    let read = document.querySelector("#read").value;
-    return read;
-}
-
-function addBookToLibrary() {
-    let bookName = title;
-    bookName = new Book(getTitleFromForm(), getAuthorFromForm(), getTotalPagesFromForm(), getReadStatusFromForm());
-    myLibrary.push(bookName);
-    return myLibrary;
-}
-
-
-submitButton.addEventListener("click", function (e) {
-    e.preventDefault();
-    modal.style.display = "none";
-    console.log(getTitleFromForm());
-    console.log(getAuthorFromForm());
-    console.log(getTotalPagesFromForm());
-    console.log(getReadStatusFromForm());
-    addBookToLibrary()
-    console.log(myLibrary)
-
-})
+</html>
