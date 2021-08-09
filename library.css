@@ -36,10 +36,17 @@
     cursor: pointer;
   }
 
-  #spaceForListOfBooks {
+  /* #spaceForListOfBooks {
     display: none;
       height: 100px;
       width: 100px;
       border:1px solid #888;
 
+  } */
+
+  .bookCard {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border:1px solid #888;
   }
