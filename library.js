@@ -67,10 +67,19 @@ function addBookToLibrary() {
     removeBookButton.classList.add("removeBookButton");
     removeBookButton.innerText = "X";
 
+    function removeBookFromLibrary() { 
+        spaceForListOfBooks.removeChild(bookCard);
+        bookCard.removeChild(removeBookButton);
+        removeBookButton.classList.remove("removeBookButton");
+        removeBookButton.innerText = undefined;
+    }
+    
+    removeBookButton.addEventListener("click", function (e) {
+        removeBookFromLibrary();
+    });
 
     return myLibrary;
 }
-
 
 submitButton.addEventListener("click", function (e) {
     e.preventDefault();
