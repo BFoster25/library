@@ -6,9 +6,6 @@ const submitButton = document.querySelector("#submit");
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
-const spaceForListOfBooks = document.querySelector("#spaceForListOfBooks");
-
-
 addNewBookButton.addEventListener("click", function () {
     modal.style.display = "block";
 });
@@ -59,10 +56,18 @@ function addBookToLibrary() {
     let bookName = title;
     bookName = new Book(getTitleFromForm(), getAuthorFromForm(), getTotalPagesFromForm(), getReadStatusFromForm());
     myLibrary.push(bookName);
+    const spaceForListOfBooks = document.querySelector("#spaceForListOfBooks");
     let bookCard = document.createElement("div");
     spaceForListOfBooks.appendChild(bookCard);
     bookCard.classList.add("bookCard");
     bookCard.innerText = `Title: ${bookName.title} Author: ${bookName.author} Total Pages: ${bookName.totalPages} Read Status: ${bookName.read}`;
+
+    let removeBookButton = document.createElement("button");
+    bookCard.appendChild(removeBookButton);
+    removeBookButton.classList.add("removeBookButton");
+    removeBookButton.innerText = "X";
+
+
     return myLibrary;
 }
 
