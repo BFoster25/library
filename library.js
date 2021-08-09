@@ -59,6 +59,10 @@ function addBookToLibrary() {
     let bookName = title;
     bookName = new Book(getTitleFromForm(), getAuthorFromForm(), getTotalPagesFromForm(), getReadStatusFromForm());
     myLibrary.push(bookName);
+    let bookCard = document.createElement("div");
+    spaceForListOfBooks.appendChild(bookCard);
+    bookCard.classList.add("bookCard");
+    bookCard.innerText = `Title: ${bookName.title} Author: ${bookName.author} Total Pages: ${bookName.totalPages} Read Status: ${bookName.read}`;
     return myLibrary;
 }
 
@@ -66,12 +70,7 @@ function addBookToLibrary() {
 submitButton.addEventListener("click", function (e) {
     e.preventDefault();
     modal.style.display = "none";
-    console.log(getTitleFromForm());
-    console.log(getAuthorFromForm());
-    console.log(getTotalPagesFromForm());
-    console.log(getReadStatusFromForm());
     addBookToLibrary()
-    spaceForListOfBooks.style.display = "block";
     console.log(myLibrary)
 
 })
